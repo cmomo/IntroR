@@ -1,0 +1,13 @@
+1.	Identify the class of each variable/column
+2.	Create a new categorical variable for “Married”, labelled as 1= “Married”, 0 = “Not married”
+3.	Obtain the frequency table of “SmokingHx”, “Sex”
+4.	Calculate the mean and standard deviation for all continuous variables, including “Age”, “BMI”
+5.	Group subjects into five age groups:
+		Age 25-35, 35-45, 45-55, 55-65, 65+
+6.	What is the frequency of current smokers in each age group and each gender group?
+7.	What are the mean and standard deviation of “Age” and “BMI” in different smoking groups (i.e., never, former, current)? Save the results as table in CSV or TXT file. 
+8.	Test the mean difference between these smoking groups:
+a.	Never vs. former
+b.	Former vs. current
+c.	Never vs. current
+d.	Never vs. former and current
