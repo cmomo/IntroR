@@ -1,3 +1,3 @@
 # IntroR
 
-Examples of R
+R examples
