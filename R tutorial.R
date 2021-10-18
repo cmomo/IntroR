@@ -356,8 +356,4 @@ t.test(data2_1$gre, data2_0a$gre, alternative = "two.sided" )
 t.test(data2_1$gpa, data2_0a$gpa, alternative = "two.sided" )
 wilcox.test(data2_1$gre, data2_0a$gre )
 wilcox.test(data2_1$gpa, data2_0a$gpa )
-hist(data2_1$gre)
-hist(data2_0a$gre)
-
-
 
