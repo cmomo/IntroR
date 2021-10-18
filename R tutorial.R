@@ -1,13 +1,28 @@
+### ------------------------------------- ###
+###               Intro to R              ###
+### ------------------------------------- ###
+
+
 # rm(list = ls())
 
 
-# 1. R installation:
+### ------------------------------------- ###
+# 1. R installation                         #
+### ------------------------------------- ###
 # https://www.r-project.org/
 
-# 2. R studio
+
+
+### ------------------------------------- ###
+# 2. R studio                               #
+### ------------------------------------- ###
 # https://www.rstudio.com/
 
-# 3. Common data types
+
+
+### ------------------------------------- ###
+# 3. Common data types                      #
+### ------------------------------------- ###
 
 ## Numeric:
 x1<-c(1:10)
@@ -36,8 +51,9 @@ x1x2_list=list(var1=x1,var2=x2) # var1 and var2 are the variable/column names gi
 
 
 
-
-# 4. Operators for basic calculation:
+### ------------------------------------- ###
+# 4. Operators for basic calculation:       #
+### ------------------------------------- ###
 
 ## Addition
 20+50
@@ -104,7 +120,9 @@ m1 %*% m2
 
 
 
-# 5. Import data sets
+### ------------------------------------- ###
+# 5. Import data sets                       #
+### ------------------------------------- ###
 
 setwd("C:/Users/sarbe/OneDrive/Desktop/R Data")
 # setwd("/YOUR DATA LOCATION/")
@@ -133,8 +151,9 @@ data_xlsx=read.xlsx("binary.xlsx", sheet="binary"  ) # import the 1st sheet by i
 
 
 
-
-# 6. Data inspection
+### ------------------------------------- ###
+# 6. Data inspection                        #
+### ------------------------------------- ###
 
 ## Let's check the dimension of the dataset using data_csv:
 dim(data_csv)
@@ -179,9 +198,10 @@ head(adm_numeric2)
 
 
 
+### ------------------------------------- ###
+# 7. Try some calculations using "data_csv" #
+### ------------------------------------- ###
 
-
-# 7. Try some calculations using "data_csv"
 
 ## Calculate the difference between GRE score and the mean GRE score: 
 mu=mean(data_csv$gre)
@@ -196,7 +216,10 @@ data_csv$gre1_byAdmit=ifelse(data_csv$admit==1, data_csv$gre-mu1, data_csv$gre-m
 
 
 
-# 8. Descriptive of data
+
+### ------------------------------------- ###
+# 8. Descriptive of data                    #
+### ------------------------------------- ###
 
 ## If a vector of IDs are available for all subjects, and they are saved in the order as the data set.
 ## We want to combine the IDs with the data set. 
@@ -259,17 +282,11 @@ table(data2$gpa_group)
 sum(table(data2$gpa_group))
 
 
-# 7. Test between two admission groups: admit vs. not admit
-t.test(data2_1$gre, data2_0a$gre, alternative = "two.sided" )
-t.test(data2_1$gpa, data2_0a$gpa, alternative = "two.sided" )
-wilcox.test(data2_1$gre, data2_0a$gre )
-wilcox.test(data2_1$gpa, data2_0a$gpa )
-hist(data2_1$gre)
-hist(data2_0a$gre)
 
 
-
-# 9. Data saving, management, and cleaning
+### ------------------------------------- ###
+# 9. Data saving, management, and cleaning  #
+### ------------------------------------- ###
 
 aggregate(data2[, c("gre")], by=list(data2$admit_group), meanSD)
 aggregate(data2[, c("gpa")], by=list(data2$admit_group), meanSD)
@@ -328,6 +345,19 @@ write.csv(res_gre_gpa_r1, file = "res_gre_gpa_r.csv" )
 write.csv(res_gre_gpa_r1, file = "res_gre_gpa_r(1).csv", row.names = F )
 
 
+
+
+
+### ------------------------------------------------------- ###
+# 10. Test between two admission groups: admit vs. not admit  #
+### ------------------------------------------------------- ###
+
+t.test(data2_1$gre, data2_0a$gre, alternative = "two.sided" )
+t.test(data2_1$gpa, data2_0a$gpa, alternative = "two.sided" )
+wilcox.test(data2_1$gre, data2_0a$gre )
+wilcox.test(data2_1$gpa, data2_0a$gpa )
+hist(data2_1$gre)
+hist(data2_0a$gre)
 
 
 
