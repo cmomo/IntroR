@@ -124,7 +124,7 @@ m1 %*% m2
 # 5. Import data sets                       #
 ### ------------------------------------- ###
 
-setwd("C:/Users/sarbe/OneDrive/Desktop/R Data")
+setwd("~/YOUR FILE LOCATION")
 # setwd("/YOUR DATA LOCATION/")
 
 ## Import CSV data file
