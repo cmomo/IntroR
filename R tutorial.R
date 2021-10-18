@@ -3,7 +3,7 @@
 ### ------------------------------------- ###
 
 
-# rm(list = ls())
+# rm(list = ls()): this is the code to empty the global environment in R
 
 
 ### ------------------------------------- ###
@@ -129,6 +129,8 @@ setwd("~/YOUR FILE LOCATION")
 
 ## Import CSV data file
 data_csv=read.csv("binary.csv", header = TRUE, stringsAsFactors = FALSE )
+## Import CSV data from an online link, e.g., GitHub repository
+data_csv.GitHub=read.csv("https://raw.githubusercontent.com/cmomo/IntroR/main/binary.csv", header = TRUE, stringsAsFactors = FALSE )
 
 
 ## Import text data file
