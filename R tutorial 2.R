@@ -5,8 +5,7 @@
 
 # 0. Set directory
 
-setwd("C:/Users/sarbe/OneDrive/Desktop/R Data")
-# setwd("/YOUR DATA LOCATION/")
+setwd("/YOUR DATA LOCATION/")
 
 
 # 1. Need to combine data files based on subjects' ID
