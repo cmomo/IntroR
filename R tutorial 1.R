@@ -127,12 +127,12 @@ m1 %*% m2
 setwd("/YOUR DATA LOCATION/")
 
 ## Import CSV data file
-data_csv=read.csv("binary.csv", header = TRUE, stringsAsFactors = FALSE )
+data_csv=read.csv("Data 1/binary.csv", header = TRUE, stringsAsFactors = FALSE )
 ## Import CSV data from an online link, e.g., GitHub repository
-data_csv.GitHub=read.csv("https://raw.githubusercontent.com/cmomo/IntroR/main/binary.csv", header = TRUE, stringsAsFactors = FALSE )
+data_csv.GitHub=read.csv("https://raw.githubusercontent.com/cmomo/IntroR/main/Data 1/binary.csv", header = TRUE, stringsAsFactors = FALSE )
 
 ## Import text data file
-data_txt=read.table("binary.txt", header = TRUE, stringsAsFactors = FALSE )
+data_txt=read.table("Data 1/binary.txt", header = TRUE, stringsAsFactors = FALSE )
 
 
 ## Import Excel data file (need a package called "openxlsx" to import)
@@ -145,8 +145,8 @@ require(openxlsx)
 library(openxlsx)
 
 ## Import Excel data file:
-data_xlsx=read.xlsx("binary.xlsx", sheet=1  ) # import the 1st sheet by its order number
-data_xlsx=read.xlsx("binary.xlsx", sheet="binary"  ) # import the 1st sheet by its name
+data_xlsx=read.xlsx("Data 1/binary.xlsx", sheet=1  ) # import the 1st sheet by its order number
+data_xlsx=read.xlsx("Data 1/binary.xlsx", sheet="binary"  ) # import the 1st sheet by its name
 
 
 
