@@ -14,7 +14,7 @@ setwd("/YOUR DATA LOCATION/")
 
 library(readxl)
 
-WhichFile<- "hdp_abc.xlsx"
+WhichFile<- "Data 2/hdp_abc.xlsx"
 excel_sheets(path = WhichFile)
 # [1] "hdp_a" "hdp_b" "hdp_c"
 
@@ -86,7 +86,7 @@ table(df_ab$remission_label, df_ab$Married_new3)
 
 # 2. Example 2: convert data between wide and long formats
 
-tolerance=read.csv("tolerance1.csv", header = T, stringsAsFactors = F )
+tolerance=read.csv("Data 1/tolerance1.csv", header = T, stringsAsFactors = F )
 head(tolerance)
 ## This data is a so called "WIDE" data - each row contains the values for one individual
 # id tol11 tol12 tol13 tol14 tol15 male exposure
@@ -148,7 +148,7 @@ tolerance.wide.2=spread(data = tolerance.long.2, key = "year", value = "toleranc
 
 
 # 3. Example 3: duplicate data
-tolerance2=read.csv("tolerance2.csv" , header = T, stringsAsFactors = F )
+tolerance2=read.csv("Data 2/tolerance2.csv" , header = T, stringsAsFactors = F )
 head(tolerance2)
 #     id tol11 tol12 tol13 tol14  tol15 male exposure
 # 1   9  2.23  1.79  1.90  2.12   2.66    0     1.54
@@ -201,7 +201,7 @@ tolerance2.clean=tolerance2[-c(2,8,15),]
 nrow(tolerance2.clean[duplicated(tolerance2.clean$id), ])
 # [1] 0
 ## 0 row shows that there is no duplicate any more.
-write.csv(tolerance2.clean, "tolerance2_clean.csv", row.names = F)
+write.csv(tolerance2.clean, "Data 2/tolerance2_clean.csv", row.names = F)
 
 
 
