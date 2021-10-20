@@ -3,7 +3,7 @@
 ### ------------------------------------- ###
 
 
-# rm(list = ls()): this is the code to empty the global environment in R
+# rm(list = ls()) ## this is the code to empty the global environment in R
 
 
 ### ------------------------------------- ###
