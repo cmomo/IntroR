@@ -21,4 +21,4 @@ Use "external" data:
 
 10. Clean data "external" (e.g., remove duplicates, remove typos with excess letters for numeric variables)
 11. Convert data "external" from long to wide format for variable "EXTERNAL" according to different "TIME" points
-11. Divide the values for "EXTERNAL" by 10 and convert the wide data to long format
+12. Divide the values for "EXTERNAL" by 10 and convert the wide data to long format
