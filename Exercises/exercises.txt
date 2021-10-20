@@ -1,3 +1,5 @@
+Use "hdp" data:
+
 1.	Combine data files “hdp1” and “hdp2” based on subjects’ IDs
 	(Hints, you can use separate files (“hdp1” and “hdp2”) in CSV or TXT formats or use the Excel file contains both in two separate spreadsheets.)
 2.	Identify the class of each variable/column
@@ -13,3 +15,10 @@
 		b.	Former vs. current
 		c.	Never vs. current
 		d.	Never vs. former and current
+
+
+Use "external" data:
+
+10. Clean data "external" (e.g., remove duplicates, remove typos with excess letters for numeric variables)
+11. Convert data "external" from long to wide format for variable "EXTERNAL" according to different "TIME" points
+11. Divide the values for "EXTERNAL" by 10 and convert the wide data to long format
