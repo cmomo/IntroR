@@ -39,7 +39,7 @@ x2[5]
 ## Logical:
 class(FALSE)
 class(NA) 
-  # NA is a data type/indicator represents the absence of a value, and is represented by the keyword NA (without quotes) 
+# NA is a data type/indicator represents the absence of a value, and is represented by the keyword NA (without quotes) 
 
 ## Vector: x1 and x2 are both a vector
 
@@ -124,14 +124,13 @@ m1 %*% m2
 # 5. Import data sets                       #
 ### ------------------------------------- ###
 
-setwd("~/YOUR FILE LOCATION")
+setwd("C:/Users/sarbe/OneDrive/Desktop/R Data")
 # setwd("/YOUR DATA LOCATION/")
 
 ## Import CSV data file
 data_csv=read.csv("binary.csv", header = TRUE, stringsAsFactors = FALSE )
 ## Import CSV data from an online link, e.g., GitHub repository
 data_csv.GitHub=read.csv("https://raw.githubusercontent.com/cmomo/IntroR/main/binary.csv", header = TRUE, stringsAsFactors = FALSE )
-
 
 ## Import text data file
 data_txt=read.table("binary.txt", header = TRUE, stringsAsFactors = FALSE )
@@ -161,7 +160,19 @@ data_xlsx=read.xlsx("binary.xlsx", sheet="binary"  ) # import the 1st sheet by i
 dim(data_csv)
 nrow(data_csv)
 ncol(data_csv)
+
+
+## We can obtain the column and row names, also change the names accordingly.
 colnames(data_csv)
+colnames(data_csv)[1]="status"
+colnames(data_csv)
+colnames(data_csv)[c(2:4)]=c("GRE", "GPA", "ranking")
+colnames(data_csv)
+colnames(data_csv)=c("admit","gre","gpa","rank" )
+colnames(data_csv)
+
+rownames(data_csv)
+
 
 
 ## Let's find out the class of each variable (i.e., column):
@@ -358,4 +369,6 @@ t.test(data2_1$gre, data2_0a$gre, alternative = "two.sided" )
 t.test(data2_1$gpa, data2_0a$gpa, alternative = "two.sided" )
 wilcox.test(data2_1$gre, data2_0a$gre )
 wilcox.test(data2_1$gpa, data2_0a$gpa )
+
+
 
